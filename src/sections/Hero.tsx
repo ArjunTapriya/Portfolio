@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { RESUME_DATA } from "@/data/resume";
 import { ArrowRight, Terminal, MapPin, Code2, Link as LinkIcon, Download } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { TerminalAnimation } from "@/components/ui/TerminalAnimation";
 
 export function Hero() {
   return (
@@ -59,23 +60,7 @@ export function Hero() {
             <div className="absolute top-6 right-6 text-white/20 group-hover:text-white/40 transition-colors">
               <Terminal size={48} />
             </div>
-            <div className="font-mono text-sm sm:text-base text-brand-text-secondary">
-              <div className="flex gap-2 items-center mb-2">
-                <span className="text-green-500">➜</span>
-                <span className="text-blue-400">~</span>
-                <span className="text-white">whoami</span>
-              </div>
-              <p className="text-white mb-4">Software Developer & Perfectionist</p>
-
-              <div className="flex gap-2 items-center mb-2">
-                <span className="text-green-500">➜</span>
-                <span className="text-blue-400">~</span>
-                <span className="text-white">cat skills.txt</span>
-              </div>
-              <p className="text-brand-text-secondary leading-relaxed max-w-[80%]">
-                Building scalable architectures, crafting pixel-perfect interfaces, and solving complex algorithmic challenges.
-              </p>
-            </div>
+            <TerminalAnimation />
           </motion.div>
 
           {/* Map / Location Card */}

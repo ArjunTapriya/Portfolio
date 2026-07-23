@@ -13,12 +13,12 @@ export const RESUME_DATA = {
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/Arjun1109",
+        url: "https://github.com/ArjunTapriya",
         icon: "github",
       },
       {
         name: "LinkedIn",
-        url: "https://linkedin.com/in/arjun-tapriya", // Assuming this from typical patterns
+        url: "https://www.linkedin.com/in/arjun-tapriya001/",
         icon: "linkedin",
       },
     ],
