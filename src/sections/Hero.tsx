@@ -5,6 +5,7 @@ import { RESUME_DATA } from "@/data/resume";
 import { ArrowRight, Terminal, MapPin, Code2, Link as LinkIcon, Download } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { TerminalAnimation } from "@/components/ui/TerminalAnimation";
+import { WordRevealAnimation } from "@/components/ui/WordRevealAnimation";
 
 export function Hero() {
   return (
@@ -26,9 +27,10 @@ export function Hero() {
               Hi, I'm <br />
               <span className="text-brand-text-secondary">{RESUME_DATA.name.split(' ')[0]}.</span>
             </h1>
-            <p className="text-brand-text-secondary text-lg leading-relaxed max-w-md">
-              {RESUME_DATA.about}
-            </p>
+            <WordRevealAnimation 
+              text={RESUME_DATA.about}
+              className="text-brand-text-secondary text-lg leading-relaxed max-w-md"
+            />
           </div>
 
           <div className="mt-12 flex items-center gap-4">
