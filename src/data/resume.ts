@@ -9,7 +9,7 @@ export const RESUME_DATA = {
     "I am a passionate software developer aiming to build ultra-premium, high-performance web experiences. Combining a strong foundation in Computer Science with insights from Marketing, I strive to create products that are both technically sound and highly engaging for users.",
   avatarUrl: "", // Add if you have an avatar image
   contact: {
-    email: "arjun.n.t1109@gmail.com",
+    email: "arjuntap1109@gmail.com",
     social: [
       {
         name: "GitHub",
