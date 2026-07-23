@@ -19,11 +19,11 @@ export function Experience() {
             className="relative mb-12 last:mb-0"
           >
             {/* Timeline Node */}
-            <div className="absolute -left-[41px] top-1 w-5 h-5 bg-[#030303] border-2 border-white rounded-full flex items-center justify-center">
-              <div className="w-1.5 h-1.5 bg-white rounded-full" />
+            <div className="absolute -left-[41px] top-1 w-5 h-5 bg-black border-2 border-white/50 rounded-full flex items-center justify-center group-hover:border-cyan-400 group-hover:shadow-[0_0_10px_#06b6d4] transition-all duration-300">
+              <div className="w-1.5 h-1.5 bg-white group-hover:bg-cyan-400 rounded-full transition-colors" />
             </div>
             
-            <div className="glass-panel p-6 md:p-8 rounded-3xl group">
+            <div className="glass-panel glass-panel-hover p-6 md:p-8 rounded-3xl group cursor-default">
               <div className="flex flex-col md:flex-row md:items-start justify-between mb-4 gap-2">
                 <div>
                   <h3 className="text-xl font-bold text-white mb-1 group-hover:text-neutral-300 transition-colors">{exp.title}</h3>

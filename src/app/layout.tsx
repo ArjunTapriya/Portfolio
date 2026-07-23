@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScrolling from "@/components/SmoothScrolling";
+import { SplineBackground } from "@/components/layout/SplineBackground";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -33,7 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="min-h-screen bg-brand-bg text-brand-text antialiased selection:bg-brand-accent selection:text-white">
+      <body className="min-h-screen bg-black text-brand-text antialiased selection:bg-brand-accent selection:text-white relative">
+        <SplineBackground />
+        
         <SmoothScrolling>
           {children}
         </SmoothScrolling>

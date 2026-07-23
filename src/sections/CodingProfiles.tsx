@@ -21,13 +21,16 @@ export function CodingProfiles() {
             transition={{ duration: 0.5, delay: idx * 0.1 }}
             className="block group"
           >
-            <div className="glass-panel h-full relative overflow-hidden rounded-3xl p-6 group-hover:bg-white/[0.03] transition-colors">
-              <div className="absolute top-6 right-6 opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+            <div className="glass-panel glass-panel-hover h-full relative overflow-hidden rounded-3xl p-6 transition-all duration-500">
+              {/* Inner Grid Texture */}
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:16px_16px] opacity-10 group-hover:opacity-30 transition-opacity duration-500 pointer-events-none"></div>
+
+              <div className="absolute top-6 right-6 opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-cyan-400">
                 <ExternalLink size={20} />
               </div>
               
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 text-white">
+              <div className="relative z-10 flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 text-white group-hover:bg-cyan-500/10 group-hover:border-cyan-400/30 group-hover:text-cyan-400 transition-colors">
                   <Code2 size={24} />
                 </div>
                 <div>

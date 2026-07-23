@@ -51,10 +51,16 @@ function Particles({ count = 1000 }) {
 
   return (
     <>
-      <pointLight ref={light} distance={40} intensity={8} color="#7C3AED" />
+      <pointLight ref={light} distance={60} intensity={12} color="#3b82f6" />
       <instancedMesh ref={mesh} args={[undefined, undefined, count]}>
-        <dodecahedronGeometry args={[0.2, 0]} />
-        <meshPhongMaterial color="#101010" />
+        <dodecahedronGeometry args={[0.15, 0]} />
+        <meshPhongMaterial 
+          color="#4b5563" 
+          emissive="#3b82f6" 
+          emissiveIntensity={0.4} 
+          transparent 
+          opacity={0.8} 
+        />
       </instancedMesh>
     </>
   );
@@ -62,10 +68,10 @@ function Particles({ count = 1000 }) {
 
 export function ParticlesBackground() {
   return (
-    <div className="absolute inset-0 z-0 opacity-40">
+    <div className="absolute inset-0 z-0 opacity-70">
       <Canvas camera={{ fov: 75, position: [0, 0, 30] }}>
-        <ambientLight intensity={0.5} />
-        <Particles count={200} />
+        <ambientLight intensity={0.2} />
+        <Particles count={350} />
       </Canvas>
     </div>
   );

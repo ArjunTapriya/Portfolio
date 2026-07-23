@@ -56,7 +56,7 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="glass-panel rounded-3xl p-6 md:p-8 relative overflow-hidden"
+          className="glass-panel glass-panel-hover rounded-3xl p-6 md:p-8 relative overflow-hidden"
         >
           {status === "success" ? (
             <motion.div
@@ -82,8 +82,8 @@ export function Contact() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors"
-                  placeholder="John Doe"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_15px_rgba(6,182,212,0.15)] transition-all duration-300"
+                  placeholder="Your Name"
                 />
               </div>
 
@@ -95,8 +95,8 @@ export function Contact() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors"
-                  placeholder="john@example.com"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_15px_rgba(6,182,212,0.15)] transition-all duration-300"
+                  placeholder="Your Email"
                 />
               </div>
             </div>
@@ -109,7 +109,7 @@ export function Contact() {
                 rows={5}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors resize-none"
+                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_15px_rgba(6,182,212,0.15)] transition-all duration-300 resize-none"
                 placeholder="How can I help you?"
               />
             </div>
@@ -117,7 +117,7 @@ export function Contact() {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="mt-2 w-full flex items-center justify-center gap-2 bg-white text-black px-6 py-4 rounded-xl font-semibold hover:bg-neutral-200 transition-colors disabled:opacity-50"
+              className="mt-2 w-full flex items-center justify-center gap-2 bg-white text-black px-6 py-4 rounded-xl font-bold hover:bg-cyan-50 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300 disabled:opacity-50"
             >
               {status === "submitting" ? (
                 <>
@@ -141,7 +141,7 @@ export function Contact() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-col sm:flex-row gap-4"
         >
-          <a href={`mailto:${RESUME_DATA.contact.email}`} className="flex-1 flex items-center gap-4 p-4 glass-panel rounded-2xl group">
+          <a href={`mailto:${RESUME_DATA.contact.email}`} className="flex-1 flex items-center gap-4 p-4 glass-panel glass-panel-hover rounded-2xl group cursor-pointer">
             <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors text-white">
               <Mail size={18} />
             </div>
@@ -152,7 +152,7 @@ export function Contact() {
           </a>
 
           {RESUME_DATA.contact.social.map((social, idx) => (
-            <a key={idx} href={social.url} target="_blank" rel="noreferrer" className="flex-1 flex items-center gap-4 p-4 glass-panel rounded-2xl group">
+            <a key={idx} href={social.url} target="_blank" rel="noreferrer" className="flex-1 flex items-center gap-4 p-4 glass-panel glass-panel-hover rounded-2xl group cursor-pointer">
               <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors text-white">
                 {social.name.toLowerCase() === "github" ? <FaGithub size={18} /> : <FaLinkedin size={18} />}
               </div>

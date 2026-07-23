@@ -155,7 +155,7 @@ export const RESUME_DATA = {
       platform: "LeetCode",
       username: "Arjun1109",
       rating: "N/A",
-      problemsSolved: "140+",
+      problemsSolved: "170+",
       link: "https://leetcode.com/u/Arjun1109/",
     },
     {

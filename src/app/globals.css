@@ -52,10 +52,37 @@ body {
 /* Premium Utilities */
 @layer utilities {
   .glass-panel {
-    background: rgba(255, 255, 255, 0.015);
+    background: #0a0a0a;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+  
+  .glass-panel::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background: radial-gradient(180px circle at 50% 50%, rgba(255, 255, 255, 0.08), transparent 80%);
+    opacity: 0;
+    transition: opacity 0.4s;
+    padding: 1px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box exclude, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box exclude, linear-gradient(#fff 0 0);
+  }
+  
+  .glass-panel:hover::after, .glass-panel-hover:hover::after {
+    opacity: 1;
+  }
+  
+  .glass-panel:hover, .glass-panel-hover:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    background: #0c0c0c;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.8);
+    transform: translateY(-4px);
   }
   
   .text-gradient {

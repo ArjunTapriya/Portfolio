@@ -12,17 +12,17 @@ interface SplitLayoutProps {
 
 export function SplitLayout({ id, title, subtitle, children }: SplitLayoutProps) {
   return (
-    <section id={id} className="w-full py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
-      <div className="flex flex-col md:flex-row gap-12 md:gap-24 relative">
-        {/* Sticky Left Sidebar for Section Title */}
-        <div className="w-full md:w-1/3 md:sticky md:top-32 h-fit">
+    <section id={id} className="w-full py-10 md:py-16 px-6 max-w-6xl mx-auto">
+      <div className="flex flex-col gap-6 md:gap-10 relative">
+        {/* Section Header */}
+        <div className="w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-2">
               {title}
             </h2>
             {subtitle && (
@@ -33,8 +33,8 @@ export function SplitLayout({ id, title, subtitle, children }: SplitLayoutProps)
           </motion.div>
         </div>
 
-        {/* Scrollable Right Content */}
-        <div className="w-full md:w-2/3">
+        {/* Content Body */}
+        <div className="w-full">
           {children}
         </div>
       </div>
