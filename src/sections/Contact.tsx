@@ -156,9 +156,8 @@ export function Contact() {
               <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors text-white">
                 {social.name.toLowerCase() === "github" ? <FaGithub size={18} /> : <FaLinkedin size={18} />}
               </div>
-              <div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-brand-text-secondary">{social.name}</div>
-                <div className="text-white font-medium text-sm">{social.url.replace("https://", "")}</div>
+              <div className="flex items-center">
+                <div className="text-white font-bold tracking-widest uppercase">{social.name}</div>
               </div>
             </a>
           ))}

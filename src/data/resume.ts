@@ -147,7 +147,7 @@ export const RESUME_DATA = {
     {
       platform: "Codeforces",
       username: "arjuntapriya9754",
-      rating: "935",
+      rating: "1019",
       problemsSolved: "170+",
       link: "https://codeforces.com/profile/arjuntapriya9754",
     },
